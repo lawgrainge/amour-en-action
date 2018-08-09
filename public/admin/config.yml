@@ -8,8 +8,9 @@ public_folder: 'uploads'
 collections:
   - name: 'homepage'
     label: 'Home Page'
-    folder: 'content/'
+    folder: 'public/content/'
     create: true
+    format: 'json'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', default: 'homepage' }
       - { label: 'Hero Heading', name: 'heroHeading', widget: 'string', required: true }
