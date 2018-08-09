@@ -15,3 +15,16 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', default: 'homepage' }
       - { label: 'Hero Heading', name: 'heroHeading', widget: 'string', required: true }
       - { label: 'Hero Subheading', name: 'heroSubheading', widget: 'string' }
+
+  - name: "journal"
+    label: "Journal Entries"
+    folder: "public/content/journal"
+    create: true
+    slug: "{{month}}-{{day}}-{{year}}_{{slug}}"
+    format: 'json'
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "journal-entry" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
