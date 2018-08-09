@@ -11,6 +11,6 @@ collections:
     folder: 'content/'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' default: 'homepage' }
+      - { label: 'Title', name: 'title', widget: 'string', default: 'homepage' }
       - { label: 'Hero Heading', name: 'heroHeading', widget: 'string', required: true }
       - { label: 'Hero Subheading', name: 'heroSubheading', widget: 'string' }
