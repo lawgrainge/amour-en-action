@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: 'public/uploads'
+public_folder: 'uploads'
+
+collections:
+  - name: 'homepage'
+    label: 'Home Page'
+    folder: 'content/'
+    create: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', required: true }

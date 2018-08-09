@@ -1,0 +1,14 @@
+.header {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: calc(100% - 80px);
+    border-top: 2px solid #fcfcfc;
+    padding: 20px;
+}
+
+.header__nav-link {
+    color: #fcfcfc;
+    text-decoration: none;
+    margin-right: 2.4rem;
+}
