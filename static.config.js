@@ -1,4 +1,6 @@
+import React from 'react'
 import axios from 'axios'
+
 
 export default {
   getSiteData: () => ({
@@ -51,4 +53,12 @@ export default {
       },
     ]
   },
+  Document: ({ Html, Head, Body, children, renderMeta }) => (
+    <Html>
+      <Head>
+        <script src="netlify-login.js"></script>
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  )
 }
