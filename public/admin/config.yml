@@ -12,4 +12,4 @@ collections:
     create: true
     fields:
       - { label: 'Hero Heading', name: 'heroHeading', widget: 'string', required: true }
-        { label: 'Hero Subheading', name: 'heroSubheading', widget: 'string' }
+      - { label: 'Hero Subheading', name: 'heroSubheading', widget: 'string' }
