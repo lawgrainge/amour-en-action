@@ -11,4 +11,5 @@ collections:
     folder: 'content/'
     create: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', required: true }
+      - { label: 'Hero Heading', name: 'heroHeading', widget: 'string', required: true }
+        { label: 'Hero Subheading', name: 'heroSubheading', widget: 'string' }
