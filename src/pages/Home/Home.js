@@ -4,7 +4,11 @@ import './home.css';
 
 
 const Home = () => (
-    <p>Home Page</p>
+    <div className="page page--home">
+        <div className="hero">
+            <h1>Changing Hait For the Glory Of God</h1>
+        </div>
+    </div>
 );
 
 export default Home;
