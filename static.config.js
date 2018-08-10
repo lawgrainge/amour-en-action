@@ -55,8 +55,8 @@ export default {
         component: 'src/pages/Testimonials/Testimonials',
       },
       {
-        path: '/get-involved',
-        component: 'src/pages/GetInvolved/GetInvolved',
+        path: '/take-action',
+        component: 'src/pages/TakeAction/TakeAction',
       },
       {
         path: '/contact',
@@ -71,6 +71,8 @@ export default {
   Document: ({ Html, Head, Body, children }) => (
     <Html>
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="normalize.css" />
         <script src="netlify-login.js"></script>
       </Head>
