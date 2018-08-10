@@ -8,13 +8,15 @@ public_folder: 'uploads'
 collections:
   - name: 'homepage'
     label: 'Home Page'
-    folder: 'public/content/'
+    folder: 'public/content/pages'
     create: true
     format: 'json'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', default: 'homepage' }
-      - { label: 'Hero Heading', name: 'heroHeading', widget: 'string', required: true }
-      - { label: 'Hero Subheading', name: 'heroSubheading', widget: 'string' }
+      - { label: 'Title', name: 'title', widget: 'string', default: 'home' }
+      - { label: 'Heading', name: 'heading', widget: 'string', required: true }
+      - { label: 'Subheading', name: 'subheading', widget: 'string' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      
 
   - name: "journal"
     label: "Journal Entries"
@@ -26,5 +28,6 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "journal-entry" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Featured Image", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }

@@ -7,6 +7,7 @@ import './header.css';
 
 const Header = () => (
     <header className="header">
+        <div className="header__logo"></div>
         <nav className="header__nav">
             <Link className="header__nav-link" exact to="/">Home</Link>
             <Link className="header__nav-link" to="/about">About Us</Link>

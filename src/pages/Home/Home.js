@@ -1,14 +1,16 @@
 import React from 'react';
+import { RouteData } from 'react-static';
 
 import './home.css';
 
 
-const Home = () => (
+const Home = ({ pageData: { heading, subheading }}) => (
     <div className="page page--home">
         <div className="hero">
-            <h1>Changing Hait For the Glory Of God</h1>
+            <h1>{ heading }</h1>
+            <p>{ subheading }</p>
         </div>
     </div>
 );
 
-export default Home;
+export default () => <RouteData component={ Home } />;

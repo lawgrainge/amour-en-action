@@ -2,9 +2,18 @@
     position: absolute;
     top: 35px;
     right: 0;
-    width: calc(100% - 80px);
+    width: calc(100% - 100px);
     border-top: 2px solid #fcfcfc;
-    padding: 20px;
+    padding: 20px 20px 20px 140px;
+}
+
+.header__logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 85px;
+    height: 100px;
+    background: #222;
 }
 
 .header__nav-link {

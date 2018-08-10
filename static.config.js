@@ -1,17 +1,46 @@
 import React from 'react'
 import axios from 'axios'
+import fs from 'fs';
+import path from 'path';
+import klaw from 'klaw';
+
+
+const getPagesData = () => new Promise( resolve => {
+
+  const pagesPath = './public/content/pages';
+  let pagesData = {};
+
+  if ( fs.existsSync( pagesPath )) {
+    klaw( pagesPath )
+    .on( 'data', file => {
+      if ( path.extname( file.path ) === '.json' ) {
+        const data = JSON.parse( fs.readFileSync( file.path, 'utf8' ));
+        pagesData[ data.title ] = data;
+      }
+    })
+  }
+
+  resolve( pagesData );
+
+});
 
 
 export default {
+
   getSiteData: () => ({
-    title: 'React Static',
+    title: 'Amour En Action',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    
+    const pagesData = await getPagesData();
+
     return [
       {
         path: '/',
         component: 'src/pages/Home/Home',
+        getData: () => ({
+          pageData: pagesData.home,
+        })
       },
       {
         path: '/about',
@@ -34,28 +63,15 @@ export default {
         component: 'src/pages/Contact/Contact',
       },
       {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/containers/Post',
-          getData: () => ({
-            post,
-          }),
-        })),
-      },
-      {
         is404: true,
         component: 'src/pages/404/404',
       },
     ]
   },
-  Document: ({ Html, Head, Body, children, renderMeta }) => (
+  Document: ({ Html, Head, Body, children }) => (
     <Html>
       <Head>
+        <link rel="stylesheet" href="normalize.css" />
         <script src="netlify-login.js"></script>
       </Head>
       <Body>{children}</Body>
