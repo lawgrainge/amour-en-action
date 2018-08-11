@@ -1,6 +1,6 @@
 .header {
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 0;
     width: 0;
     border-top: 2px solid #f1f1f1;
@@ -22,13 +22,13 @@
 
 .header__menu-button {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 15px;
     padding: 10px;
     background: transparent;
     text-transform: uppercase;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.35rem;
+    letter-spacing: 0.045rem;
     color: #fcfcfc;
     white-space: nowrap;
     opacity: 0;

@@ -15,7 +15,7 @@ const Footer = () => (
             <Link className="footer__link" to="/take-action">Take Action</Link>
             <Link className="footer__link" to="/contact">Contact</Link>
         </nav>
-        <span>&copy; Amour En Action 2018</span>
+        <p className="footer__copyright">&copy; Amour En Action 2018</p>
     </footer>
 );
 

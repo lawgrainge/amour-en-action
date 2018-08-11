@@ -2,20 +2,14 @@ import React from 'react';
 import { RouteData } from 'react-static';
 
 import Section, { SectionPanel } from '../../components/Section/Section';
+import Hero from '../../components/Hero/Hero';
 
 import './home.css';
 
 
 const Home = ({ pageData: { heading, subheading }}) => (
     <div className="home">
-        <div className="hero">
-            <h1 className="hero__heading">
-                { heading }
-            </h1>
-            <p className="hero__sub-heading">
-                { subheading }
-            </p>
-        </div>
+        <Hero heading={ heading } subheading={ subheading } large />
         <Section theme="light-grain">
             <SectionPanel right padded>
                 <p>

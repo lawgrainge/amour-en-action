@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router } from 'react-static';
+import { Router, Route } from 'react-static';
 import { hot } from 'react-hot-loader';
 
 import Routes from 'react-static-routes';
@@ -36,16 +36,23 @@ class App extends Component {
 
     return (  
       <Router>
-        <div className={ `app-wrapper ${ menuOpen ? 'app-wrapper--blur' : '' }` }>
+        <Route render={({ history }) => (
+          <div className={ `app-wrapper ${ menuOpen ? 'app-wrapper--blur' : '' }` }>
           <Header links={ navLinks } toggleMenu={ this.toggleMenu } />
           <main role="main">
-            <MobileMenu links={ navLinks } isOpen={ menuOpen } closeMenu={ this.toggleMenu } />
+            <MobileMenu
+              history={ history }
+              links={ navLinks }
+              isOpen={ menuOpen }
+              closeMenu={ this.toggleMenu }
+            />
             <div className="content">
               <Routes />
             </div>
           </main>
           <Footer links={ navLinks } />
         </div>
+        )}/>
       </Router>
     )
   }

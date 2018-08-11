@@ -1,11 +1,43 @@
 import React from 'react';
-import { withSiteData } from 'react-static';
+import { RouteData } from 'react-static';
+
+import Section, { SectionPanel } from '../../components/Section/Section';
+import Hero from '../../components/Hero/Hero';
 
 import './about.css';
 
 
 const About = () => (
-    <p>About Us Page</p>
+    <div className="about">
+        <Hero heading="About Us" />
+        <Section>
+            <h2>Organized with Purpose</h2>
+            <p>
+                Amour en Action, Inc was incorporated to provide a means to those who wish 
+                to personally engage in making a difference in the lives of needy Haitian 
+                children, providing assistance in the area of education, nutrition, healthcare 
+                and other developmental initiatives.
+            </p>
+        </Section>
+        <Section>
+            <SectionPanel>
+                <h2>Some Accomplishments</h2>
+                <span>In Haiti</span>
+                <ul>
+                    <li>Operation of a free school for over 150 needy children</li>
+                    <li>Half way in the construction of a school to house over 200 children</li>
+                    <li>Organization of Medical Mission Trips</li>
+                    <li>Christmas parties with gift donations to Haitian children</li>
+                </ul>
+                <span>In The US</span>
+                <ul>
+                    <li>Incorporation of the organization</li>
+                    <li>Fundraising concerts and banquets</li>
+                    <li>Family Conference</li>
+                </ul>
+            </SectionPanel>
+        </Section>
+    </div>
 );
 
-export default withSiteData( About );
+export default () => <RouteData component={ About } />;

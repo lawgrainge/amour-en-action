@@ -1,19 +1,32 @@
 import React from 'react';
 
-import { Link } from 'react-static';
-
 import './mobile-menu.css';
 
 
-const MobileMenu = ({ isOpen, links = [], closeMenu }) => (
+const navigateTo = ( to, history, callback, e ) => {
+
+    e.preventDefault();
+
+    if ( history && to ) {
+        history.push( to )
+    }
+    if ( callback ) callback();
+};
+
+const MobileMenu = ({ isOpen, links = [], history, closeMenu }) => (
     <div className={ `mobile-menu ${ isOpen ? 'mobile-menu--open' : '' }` }>
         <button className="mobile-menu__close" type="button" onClick={ closeMenu }>
             Close
         </button>
         <ul className="mobile-menu__list">
-            { links.map(( { label, to, ...attrs }, idx ) => (
+            { links.map(({ label, to }, idx ) => (
                 <li key={ `mml-${ idx }` } className="mobile-menu__list-item">
-                    <Link className="mobile-menu__link" to={ to } { ...attrs }>{ label }</Link>
+                    <a
+                        className={ `mobile-menu__link ${ history.location.pathname === to ? 'active' : '' }` }
+                        href="#"
+                        onClick={ e => navigateTo( to, history, closeMenu, e )}>
+                        { label }
+                    </a>
                 </li>
             ))}
         </ul>

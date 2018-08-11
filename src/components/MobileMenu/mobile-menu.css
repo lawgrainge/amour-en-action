@@ -17,17 +17,19 @@
     position: absolute;
     padding: 10px 10px 10px 30px;
     right: 15px;
-    top: 8px;
+    top: 25px;
     background: transparent;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+    letter-spacing: 0.045rem;
     text-transform: uppercase;
     color: #fcfcfc;
+    z-index: 1;
 }
 
 .mobile-menu__close::before {
     content: '\00D7';
     position: absolute;
-    top: -5px;
+    top: -2px;
     left: 0;
     font-size: 2.5rem;
     
@@ -35,7 +37,7 @@
 
 .mobile-menu__list {
     list-style: none;
-    margin: 42px 1.5rem 0;
+    margin: 60px 1.5rem 0;
     padding: 0;
 }
 
