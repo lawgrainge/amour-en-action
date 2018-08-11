@@ -9,8 +9,12 @@ import './home.css';
 const Home = ({ pageData: { heading, subheading }}) => (
     <div className="home">
         <div className="hero">
-            <h1>{ heading }</h1>
-            <p>{ subheading }</p>
+            <h1 className="hero__heading">
+                { heading }
+            </h1>
+            <p className="hero__sub-heading">
+                { subheading }
+            </p>
         </div>
         <Section theme="light-grain">
             <SectionPanel right padded>

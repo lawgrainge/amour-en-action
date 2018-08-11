@@ -74,6 +74,7 @@ export default {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="normalize.css" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif:700i|Source+Sans+Pro:400,600" rel="stylesheet" />
         <script src="netlify-login.js"></script>
       </Head>
       <Body>{children}</Body>
