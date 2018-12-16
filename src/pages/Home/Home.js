@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteData, Link } from 'react-static';
+import { RouteData } from 'react-static';
 
 import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';

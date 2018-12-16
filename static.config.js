@@ -19,9 +19,24 @@ const getPagesData = () => new Promise( resolve => {
       }
     })
   }
-
   resolve( pagesData );
+});
 
+const getTestimonials = () => new Promise( resolve => {
+
+  const testimonalsPath = './public/content/testimonials';
+  let testimonials = [];
+
+  if ( fs.existsSync( testimonalsPath )) {
+    klaw( testimonalsPath )
+    .on( 'data', file => {
+      if ( path.extname( file.path ) === '.json' ) {
+        const data = JSON.parse( fs.readFileSync( file.path, 'utf8' ));
+        testimonials.push( data );
+      }
+    })
+  }
+  resolve( testimonials );
 });
 
 
@@ -33,6 +48,7 @@ export default {
   getRoutes: async () => {
     
     const pagesData = await getPagesData();
+    const testimonials = await getTestimonials();
 
     return [
       {
@@ -53,6 +69,9 @@ export default {
       {
         path: '/testimonials',
         component: 'src/pages/Testimonials/Testimonials',
+        getData: () => ({
+          testimonials
+        })
       },
       {
         path: '/take-action',

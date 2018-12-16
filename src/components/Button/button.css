@@ -9,6 +9,7 @@
     letter-spacing: .048rem;
     border-bottom: 1px solid #9e9b97;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .button--center {
