@@ -39,6 +39,7 @@ collections:
     create: true
     slug: "{{month}}-{{day}}-{{year}}_{{slug}}"
     format: 'json'
+    identifier_field: name
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Location", name: "location", widget: "string" }
