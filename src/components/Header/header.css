@@ -84,6 +84,12 @@
     }
 }
 
+@media screen and ( min-width: 1200px ) {
+    .header {
+        top: 40px;
+    }
+}
+
 @keyframes menu-grow {
     0% {
         width: 0%;

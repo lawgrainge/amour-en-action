@@ -1,5 +1,4 @@
 .mobile-menu {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -7,15 +6,20 @@
     height: 100%;
     background: rgba(46, 40, 33,.75);
     z-index: 10;
+    opacity: 0;
+    transform: translateY(-10000px);
+    transition: opacity .4s, transform 0s .4s;
 }
 
 .mobile-menu--open {
-    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .4s;
 }
 
-.mobile-menu__close {
+.mobile-menu__close-button {
     position: absolute;
-    padding: 10px 10px 10px 30px;
+    padding: 5px 10px 10px 30px;
     right: 15px;
     top: 25px;
     background: transparent;
@@ -26,10 +30,10 @@
     z-index: 1;
 }
 
-.mobile-menu__close::before {
+.mobile-menu__close-button::before {
     content: '\00D7';
     position: absolute;
-    top: -2px;
+    top: -7px;
     left: 0;
     font-size: 2.5rem;
     
@@ -60,7 +64,6 @@
 }
 
 .mobile-menu__link.active {
-    padding-left: 38px;
     font-style: italic;
     font-weight: bold;
 }
@@ -68,11 +71,11 @@
 .mobile-menu__link.active::before {
     content: '';
     position: absolute;
-    width: 1rem;
+    width: 8px;
     height: 5px;
     background: red;
-    left: 17px;
-    top: 44%;
+    left: 0px;
+    top: 45%;
     transform: skewX(-24deg);
 }
 

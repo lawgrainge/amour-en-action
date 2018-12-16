@@ -1,0 +1,51 @@
+.heart-image {
+
+    position: absolute;
+    right: -220px;
+    width: 340px;
+    top: -90px;
+    z-index: 2;
+}
+
+.home__intro {
+    margin: 0 0 20px;
+    width: 75%;
+}
+
+.highlighted {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+@media screen and (min-width: 768px) {
+    .heart-image {
+        width: 55%;
+    }
+
+    .amour-section {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .heart-image {
+        top: -130px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home__intro {
+        width: 65%;
+    }
+
+    .heart-image {
+        width: 51%;
+        top: -160px;
+    }
+
+    .amour-section {
+        margin-left: 50px;
+    }
+}

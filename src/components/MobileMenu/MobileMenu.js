@@ -15,9 +15,13 @@ const navigateTo = ( to, history, callback, e ) => {
 
 const MobileMenu = ({ isOpen, links = [], history, closeMenu }) => (
     <div className={ `mobile-menu ${ isOpen ? 'mobile-menu--open' : '' }` }>
-        <button className="mobile-menu__close" type="button" onClick={ closeMenu }>
+        <button
+            className="mobile-menu__close-button"
+            type="button"
+            onClick={ closeMenu }>
             Close
         </button>
+
         <ul className="mobile-menu__list">
             { links.map(({ label, to }, idx ) => (
                 <li key={ `mml-${ idx }` } className="mobile-menu__list-item">

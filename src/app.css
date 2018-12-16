@@ -20,8 +20,27 @@ h1, h2, h3 {
   font-family: 'PT Serif', serif;
 }
 
+h3 {
+  font-size: 1.45rem;
+}
+
 img {
   max-width: 100%;
+}
+
+p {
+  margin: 30px 0;
+  line-height: 1.8rem;
+}
+
+ul {
+  margin: 15px 0 30px;
+  padding: 0 0 0 20px;
+  list-style-type: none;
+}
+
+li {
+  margin: 12px 0;
 }
 
 button {
@@ -35,9 +54,15 @@ button {
   filter: blur( 10px );
 }
 
+.app-wrapper--blur {
+  width: 100%;
+  position: fixed;
+}
+
 .content {
   min-height: 80vh;
   transition: filter .4s;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 1200px) {

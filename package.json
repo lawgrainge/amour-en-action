@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
+    "flow-bin": "^0.81.0",
     "klaw": "^3.0.0",
     "serve": "^6.1.0"
   }

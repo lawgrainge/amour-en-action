@@ -7,10 +7,10 @@ import './header.css';
 
 const Header = ({ toggleMenu }) => (
     <header className="header">
-        <div className="header__logo"></div>
         <button className="header__menu-button" type="button" onClick={ toggleMenu }>
             &#9776; Menu
         </button>
+        <div className="header__logo"></div>
         <nav className="header__nav">
             <Link className="header__nav-link" exact to="/">Home</Link>
             <Link className="header__nav-link" to="/about">About Us</Link>

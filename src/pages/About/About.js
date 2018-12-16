@@ -1,8 +1,9 @@
 import React from 'react';
 import { RouteData } from 'react-static';
 
-import Section, { SectionPanel } from '../../components/Section/Section';
+import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';
+import Button from '../../components/Button/Button';
 
 import './about.css';
 
@@ -10,17 +11,20 @@ import './about.css';
 const About = () => (
     <div className="about">
         <Hero heading="About Us" />
-        <Section>
-            <h2>Organized with Purpose</h2>
-            <p>
-                Amour en Action, Inc was incorporated to provide a means to those who wish 
-                to personally engage in making a difference in the lives of needy Haitian 
-                children, providing assistance in the area of education, nutrition, healthcare 
-                and other developmental initiatives.
-            </p>
+        <Section theme="light-grain">
+            <SectionPanel padded>
+                <h2>Organized with Purpose</h2>
+                <p>
+                    Amour en Action, Inc was incorporated to provide a means to those who wish 
+                    to personally engage in making a difference in the lives of needy Haitian 
+                    children, providing assistance in the area of education, nutrition, healthcare 
+                    and other developmental initiatives.
+                </p>
+            </SectionPanel>
         </Section>
         <Section>
-            <SectionPanel>
+            <SectionImage src="" />
+            <SlantedPanel>
                 <h2>Some Accomplishments</h2>
                 <span>In Haiti</span>
                 <ul>
@@ -35,8 +39,9 @@ const About = () => (
                     <li>Fundraising concerts and banquets</li>
                     <li>Family Conference</li>
                 </ul>
-            </SectionPanel>
+            </SlantedPanel>
         </Section>
+       
     </div>
 );
 
