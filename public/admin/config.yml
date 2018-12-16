@@ -6,8 +6,8 @@ media_folder: 'public/uploads'
 public_folder: 'uploads'
 
 collections:
-  - name: 'homepage'
-    label: 'Home Page'
+  - name: 'pages'
+    label: 'Pages'
     folder: 'public/content/pages'
     create: true
     format: 'json'
@@ -15,7 +15,9 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string', default: 'home' }
       - { label: 'Heading', name: 'heading', widget: 'string', required: true }
       - { label: 'Subheading', name: 'subheading', widget: 'string' }
-      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Hero Image (small)', name: 'heroImageSm', widget: 'image' }
+      - { label: 'Hero Image (medium)', name: 'heroImageMed', widget: 'image' }
+      - { label: 'Hero Image (large)', name: 'heroImageLg', widget: 'image' }
       
 
   - name: "journal"
