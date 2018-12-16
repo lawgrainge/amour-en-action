@@ -1,0 +1,32 @@
+.staff-card {
+    margin: 0 20px 40px;
+    padding-bottom: 25px;
+    width: 250px;
+    background: #fcfcfc;
+    text-align: center;
+    border-bottom: 2px solid #555;
+    transform: translate3d(0);
+    transition: all .3s;
+}
+
+.staff-card:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+.staff-card__name {
+    display: block;
+    margin-top: 15px;
+    font-family: 'PT Serif', serif;
+}
+
+.staff-card__title {
+    display: block;
+    margin: 5px 0 0;
+    font-size: .85rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .staff-card {
+        width: 225px;
+    }
+}

@@ -22,7 +22,7 @@ export const SectionPanel = ({ children, right, slanted = false }) => {
 
     return (
         <div className="section__content">
-            <div className={classNames}>
+            <div className={ classNames }>
                 { children }
             </div>
         </div>

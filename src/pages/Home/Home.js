@@ -1,5 +1,5 @@
 import React from 'react';
-import { RouteData } from 'react-static';
+import { RouteData, Link } from 'react-static';
 
 import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';
@@ -37,7 +37,11 @@ const Home = ({ pageData: { heading, subheading }}) => (
                         <li>Providing Clean Water</li>
                         <li>Building Clinics & Hospitals</li>
                     </ul>
-                    <Button style={{ marginLeft: 10 }}>About us</Button>
+
+                    <Button to="/about" style={{ marginLeft: 10 }}>
+                        About us
+                    </Button>
+                    
                 </div>
             </SlantedPanel>
         </Section>
@@ -52,7 +56,9 @@ const Home = ({ pageData: { heading, subheading }}) => (
                     <br/>
                     <span className="highlighted">*All contributions are tax-deductible.</span>
                 </p>
-                <Button position="center">Make a Donation</Button>
+                <Button to="/take-action" position="center">
+                    Make a Donation
+                </Button>
             </SectionPanel>
         </Section>
     </div>
@@ -77,7 +83,7 @@ export const HeartImage = ({ src, pos = {}, size = {} }) => (
                 x={ pos.x || 0 }
                 y={ pos.y || 0 }
                 xlinkHref={ src }
-                preserveAspectRatio="MinXYMid meet"
+                preserveAspectRatio="xMinYMid meet"
                 clipPath="url(#a)"
             />
         </svg>

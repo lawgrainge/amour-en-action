@@ -1,19 +1,38 @@
 import React from 'react';
 
+import { Link } from 'react-static';
+
 import './button.css';
 
 
-const Button = ({ children, type, position, style }) => {
+const Button = ({ children, type, position, style, to }) => {
 
-    let classNames = 'button';
+    let component;
+    let buttonProps = { 
+        className: 'button',
+        style: style
+    };
 
-    if ( type ) classNames += ` button--${ type }`;
-    if ( position ) classNames += ` button--${ position }`;
+    if ( type ) buttonProps.className += ` button--${ type }`;
+    if ( position ) buttonProps.className += ` button--${ position }`;
+
+    if ( to ) {
+        buttonProps.to = to;
+        component = (
+            <Link { ...buttonProps }>
+                { children }
+            </Link>
+        );
+    } else {
+        component = (
+            <button type="button" { ...buttonProps }>
+                { children }
+            </button>
+        );
+    }
 
     return (
-        <button type="button" className={ classNames } style={ style }>
-            { children }
-        </button>
+        component
     );
 }
 

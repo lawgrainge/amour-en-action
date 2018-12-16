@@ -3,9 +3,50 @@ import { RouteData } from 'react-static';
 
 import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';
-import Button from '../../components/Button/Button';
+import StaffCard from '../../components/StaffCard/StaffCard';
+
+import devImage from '../../../public/uploads/developer.jpg';
+import profilePlaceholder from '../../../public/images/profile-placeholder.png';
 
 import './about.css';
+
+const aeaStaff = [
+    { 
+        name: 'Duclair Atis',
+        title: 'President',
+        picture: profilePlaceholder
+    },
+    { 
+        name: 'Glenda Athus',
+        title: 'Chief of Operations',
+        picture: profilePlaceholder
+    },
+    { 
+        name: 'Romain Athus, M.D',
+        title: 'Director',
+        picture: profilePlaceholder
+    },
+    { 
+        name: 'Balanda Atis',
+        title: 'Coordinator',
+        picture: profilePlaceholder
+    },
+    { 
+        name: 'Juliana Excellent',
+        title: 'Director',
+        picture: profilePlaceholder
+    },
+    { 
+        name: 'Micheline Athis',
+        title: 'Nurse',
+        picture: profilePlaceholder
+    },
+    /*{ 
+        name: 'Raymi Athis',
+        title: 'Coordinator',
+        picture: profilePlaceholder
+    }*/
+];
 
 
 const About = () => (
@@ -22,26 +63,41 @@ const About = () => (
                 </p>
             </SectionPanel>
         </Section>
+        <Section theme="medium-gray">
+            <SectionPanel padded>
+                <div className="about-staff">
+                    { aeaStaff.map(( member, idx ) => (
+                        <StaffCard
+                            key={ `sc-${ idx }` }
+                            name={ member.name }
+                            title={ member.title }
+                            picture={ member.picture }
+                        />
+                    ))}
+                </div>
+            </SectionPanel>
+        </Section>
         <Section>
-            <SectionImage src="" />
+            <SectionImage src={ devImage } />
             <SlantedPanel>
-                <h2>Some Accomplishments</h2>
-                <span>In Haiti</span>
-                <ul>
-                    <li>Operation of a free school for over 150 needy children</li>
-                    <li>Half way in the construction of a school to house over 200 children</li>
-                    <li>Organization of Medical Mission Trips</li>
-                    <li>Christmas parties with gift donations to Haitian children</li>
-                </ul>
-                <span>In The US</span>
-                <ul>
-                    <li>Incorporation of the organization</li>
-                    <li>Fundraising concerts and banquets</li>
-                    <li>Family Conference</li>
-                </ul>
+                <div className="about-accomplishments">
+                    <h2>Some Accomplishments</h2>
+                    <span>In Haiti</span>
+                    <ul>
+                        <li>Operation of a free school for over 150 needy children</li>
+                        <li>Half way in the construction of a school to house over 200 children</li>
+                        <li>Organization of Medical Mission Trips</li>
+                        <li>Christmas parties with gift donations to Haitian children</li>
+                    </ul>
+                    <span>In The US</span>
+                    <ul>
+                        <li>Incorporation of the organization</li>
+                        <li>Fundraising concerts and banquets</li>
+                        <li>Family Conference</li>
+                    </ul>
+                </div>
             </SlantedPanel>
         </Section>
-       
     </div>
 );
 

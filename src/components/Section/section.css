@@ -11,6 +11,10 @@
     background-image: url('/images/grain.png');
 }
 
+.section--medium-gray {
+    background-color: #777;
+}
+
 .section--padded {
     padding: 35px 30px;
 }
