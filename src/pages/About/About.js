@@ -54,7 +54,7 @@ const About = () => (
         <Hero heading="About Us" />
         <Section theme="light-grain">
             <SectionPanel padded>
-                <h2>Organized with Purpose</h2>
+                <h2>Organized With Purpose</h2>
                 <p>
                     Amour en Action, Inc was incorporated to provide a means to those who wish 
                     to personally engage in making a difference in the lives of needy Haitian 

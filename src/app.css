@@ -43,6 +43,10 @@ li {
   margin: 12px 0;
 }
 
+strong {
+  font-weight: bold;
+}
+
 button {
   font-family: 'Source Sans Pro', 'HelveticaNeue-Light', sans-serif;
   cursor: pointer;
