@@ -19,7 +19,6 @@ collections:
       - { label: 'Hero Image (medium)', name: 'heroImageMed', widget: 'image' }
       - { label: 'Hero Image (large)', name: 'heroImageLg', widget: 'image' }
       
-
   - name: "journal"
     label: "Journal Entries"
     folder: "public/content/journal"
@@ -33,3 +32,15 @@ collections:
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Featured Image", name: "featureImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "public/content/testimonials"
+    create: true
+    slug: "{{month}}-{{day}}-{{year}}_{{slug}}"
+    format: 'json'
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Testimony", name: "testimony", widget: "string" }
