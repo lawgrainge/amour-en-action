@@ -1,7 +1,7 @@
 .entry-summary {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
+    margin: 0 auto 30px auto;
     padding: 20px;
     max-width: 750px;
     background: #efefef;
