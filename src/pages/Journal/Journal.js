@@ -11,7 +11,8 @@ import './journal.css';
 
 const Journal = ({ journalEntries }) => {
 
-    const [ url, entrySlug ] = window.location.search.split( 'entry=' );
+    
+    const [ url, entrySlug ] = window ? window.location.search.split( 'entry=' ) : [];
     let journalEntry = null;
 
     if ( Array.isArray( journalEntries ) && entrySlug ) {
