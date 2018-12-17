@@ -1,6 +1,4 @@
 {
-  "layout": "journal-entry",
-  "journalId": "{{slug}}-{{month}}-{{day}}-{{year}",
   "title": "2009 Mission Trip",
   "date": "2009-08-15T03:23:00.000Z",
   "thumbnail": "/uploads/developer.jpg",

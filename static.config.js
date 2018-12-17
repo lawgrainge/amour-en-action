@@ -24,23 +24,6 @@ const getPagesData = () => new Promise( resolve => {
   resolve( pagesData );
 });
 
-const getTestimonials = () => new Promise( resolve => {
-
-  const testimonalsPath = './public/content/testimonials';
-  let testimonials = [];
-
-  if ( fs.existsSync( testimonalsPath )) {
-    klaw( testimonalsPath )
-    .on( 'data', file => {
-      if ( path.extname( file.path ) === '.json' ) {
-        const data = JSON.parse( fs.readFileSync( file.path, 'utf8' ));
-        testimonials.push( data );
-      }
-    })
-  }
-  resolve( testimonials );
-});
-
 const getCMSData = ( cmsPath ) => new Promise( resolve => {
 
   let cmsData = [];
@@ -50,7 +33,8 @@ const getCMSData = ( cmsPath ) => new Promise( resolve => {
     .on( 'data', file => {
       if ( path.extname( file.path ) === '.json' ) {
         const data = JSON.parse( fs.readFileSync( file.path, 'utf8' ));
-        cmsData.push( data );
+        const slug = file.path.replace( /(.+\/)|(.json)/g, '' );
+        cmsData.push({ slug: slug, ...data });
       }
     })
   }
