@@ -1,12 +1,14 @@
 import React from 'react';
 
+import { RouteData } from 'react-static';
+ 
 import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';
 
 import './journal.css';
 
 
-const Journal = () => (
+const Journal = ({ journalEntries }) => (
     <div className="journal">
         <Hero heading="Journal" />
         <Section theme="light-grain">
@@ -19,7 +21,45 @@ const Journal = () => (
                 </p>
             </SectionPanel>
         </Section>
+        <Section theme="white">
+            <SectionPanel padded>
+                { Array.isArray( journalEntries ) && journalEntries.map(( entry, idx ) => (
+                    <EntrySummary
+                        key={ `je-${ idx }` }
+                        title={ entry.title }
+                        author={ entry.author }
+                        date={ entry.date }
+                        thumbnail={ entry.thumbnail }
+                        summary={ entry.summary }
+                    />
+                ))}
+            </SectionPanel>
+        </Section>
     </div>
 );
 
-export default Journal;
+const EntrySummary = ({ title, author, date, thumbnail, articleLink = '#', summary }) => (
+    <div className="entry-summary">
+        <div className="entry-summary__info">
+            <a className="entry-summary__info-title" href={ articleLink }>
+                { title }
+            </a>
+            <span className="entry-summary__info-summary">
+                { summary }
+            </span>
+            <span className="entry-summary__info-author">
+                { author }
+            </span>
+            <span className="entry-summary__info-date">
+                { date }
+            </span>
+        </div>
+        <a
+            className="entry-summary__info-thumbnail"
+            href={ articleLink }
+            style={{ backgroundImage: thumbnail }}
+        />
+    </div>
+);
+
+export default () => <RouteData component={ Journal } />;

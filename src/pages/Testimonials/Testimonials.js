@@ -18,8 +18,8 @@ const Testimonials = ({ testimonials }) => (
                 <h2>What Others Are Saying</h2>
                 <p>
                     It's important to hear how we're making a difference. If you would 
-                    also like to share how Amour En Action has helped you or your, 
-                    community, please contact us.
+                    like to share how Amour En Action has helped you or your community, 
+                    please contact us.
                 </p>
                 <Button to="/contact" position="center">
                     Contact Us

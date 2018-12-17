@@ -5,6 +5,8 @@ import path from 'path';
 import klaw from 'klaw';
 
 
+
+
 const getPagesData = () => new Promise( resolve => {
 
   const pagesPath = './public/content/pages';
@@ -39,6 +41,23 @@ const getTestimonials = () => new Promise( resolve => {
   resolve( testimonials );
 });
 
+const getCMSData = ( cmsPath ) => new Promise( resolve => {
+
+  let cmsData = [];
+
+  if ( fs.existsSync( cmsPath )) {
+    klaw( cmsPath )
+    .on( 'data', file => {
+      if ( path.extname( file.path ) === '.json' ) {
+        const data = JSON.parse( fs.readFileSync( file.path, 'utf8' ));
+        cmsData.push( data );
+      }
+    })
+  }
+
+  resolve( cmsData );
+});
+
 
 export default {
 
@@ -48,7 +67,8 @@ export default {
   getRoutes: async () => {
     
     const pagesData = await getPagesData();
-    const testimonials = await getTestimonials();
+    const testimonials = await getCMSData( './public/content/testimonials' );
+    const journalEntries = await getCMSData( './public/content/journal' );
 
     return [
       {
@@ -65,6 +85,9 @@ export default {
       {
         path: '/journal',
         component: 'src/pages/Journal/Journal',
+        getData: () => ({
+          journalEntries: journalEntries,
+        }) 
       },
       {
         path: '/testimonials',

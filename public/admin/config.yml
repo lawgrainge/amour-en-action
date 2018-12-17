@@ -27,10 +27,12 @@ collections:
     format: 'json'
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "journal-entry" }
+      - { label: "JournalId", name: "journalId", widget: "hidden", default: "{{slug}}-{{month}}-{{day}}-{{year}" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Featured Image", name: "featureImage", widget: "image" }
+      - { label: "Summary", name: "summary", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "testimonials"
