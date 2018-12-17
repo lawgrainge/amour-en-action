@@ -13,7 +13,7 @@ export const SectionImage = ({ src }) => (
     </div>
 );
 
-export const SectionPanel = ({ children, right, slanted = false }) => {
+export const SectionPanel = ({ children, right, slanted = false, width }) => {
 
     let classNames = 'section__panel';
 
@@ -21,7 +21,7 @@ export const SectionPanel = ({ children, right, slanted = false }) => {
     if (slanted) classNames += ' section__panel--slanted';
 
     return (
-        <div className="section__content">
+        <div className="section__content" style={{ width: width || null }}>
             <div className={ classNames }>
                 { children }
             </div>
