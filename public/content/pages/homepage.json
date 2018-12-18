@@ -2,5 +2,7 @@
   "title": "home",
   "heading": "For The Glory Of God",
   "subheading": "Help for the people of Haiti",
-  "heroImage": ""
+  "heroImageSm": "/uploads/haiti-boy_bg-sm.jpg",
+  "heroImageMed": "/uploads/haiti-boy_bg-sm.jpg",
+  "heroImageLg": "/uploads/haiti-boy_bg.jpg"
 }
