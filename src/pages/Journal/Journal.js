@@ -18,6 +18,7 @@ class Journal extends React.Component {
 
     componentDidMount() {
 
+        const { journalEntries = [] } = this.props;
         const [ url, entrySlug ] = window.location.search.split( 'entry=' );
 
         if ( Array.isArray( journalEntries ) && entrySlug ) {
@@ -32,6 +33,7 @@ class Journal extends React.Component {
     render() {
 
         const { journalEntry } = this.state;
+        const { journalEntries } = this.props;
 
         return (
             <div className="journal">
