@@ -31,8 +31,8 @@ collections:
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Featured Image", name: "featureImage", widget: "image" }
       - { label: "Summary", name: "summary", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Author", name: "author", widget: "string" }
+      - { label: "Body", name: "body", widget: "text" }
+      - { label: "AuthorName", name: "authorName", widget: "string" }
 
   - name: "testimonials"
     label: "Testimonials"

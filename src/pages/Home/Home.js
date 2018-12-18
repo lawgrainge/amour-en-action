@@ -6,12 +6,13 @@ import Hero from '../../components/Hero/Hero';
 import Button from '../../components/Button/Button';
 
 import dev from '../../../public/uploads/developer.jpg';
+
 import './home.css';
 
 
-const Home = ({ pageData: { heading, subheading }}) => (
+const Home = ({ pageData: { heading, subheading, heroImageLg }}) => (
     <div className="home">
-        <Hero heading={ heading } subheading={ subheading } large />
+        <Hero heading={ heading } subheading={ subheading } large image={ heroImageLg } />
         <Section theme="light-grain">
             <SectionPanel padded>
                 <h3 className="home__intro-heading">So We Began</h3>
