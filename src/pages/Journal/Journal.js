@@ -18,7 +18,8 @@ class Journal extends React.Component {
 
     componentDidMount() {
 
-        const { journalEntries = [] } = this.props;
+        const { pageData = {} } = this.props;
+        const { journalEntries = [] } = pageData;
         const [ url, entrySlug ] = window.location.search.split( 'entry=' );
 
         if ( Array.isArray( journalEntries ) && entrySlug ) {
@@ -33,11 +34,11 @@ class Journal extends React.Component {
     render() {
 
         const { journalEntry } = this.state;
-        const { journalEntries } = this.props;
+        const { pageData: { journalEntries, heading, heroImageSm }} = this.props;
 
         return (
             <div className="journal">
-                <Hero heading="Journal" />
+                <Hero heading={ heading } image={ heroImageSm } />
 
                 { journalEntry ?
                     <Section theme="white">

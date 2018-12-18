@@ -10,7 +10,7 @@ import Button from '../../components/Button/Button';
 import './testimonials.css';
 
 
-const Testimonials = ({ testimonials }) => (
+const Testimonials = ({ pageData: { testimonials } }) => (
     <div className="testimonials">
         <Hero heading="Testimonials" />
         <Section theme="light-grain">

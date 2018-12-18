@@ -34,6 +34,7 @@ const getCMSData = ( cmsPath ) => new Promise( resolve => {
       if ( path.extname( file.path ) === '.json' ) {
         const data = JSON.parse( fs.readFileSync( file.path, 'utf8' ));
         const slug = file.path.replace( /(.+\/)|(.json)/g, '' );
+        
         cmsData.push({ slug: slug, ...data });
       }
     })
@@ -41,6 +42,8 @@ const getCMSData = ( cmsPath ) => new Promise( resolve => {
 
   resolve( cmsData );
 });
+
+const getPageDataByName = ( pages, name ) => pages.filter( p => p.title === name )[ 0 ] || {};
 
 
 export default {
@@ -51,15 +54,24 @@ export default {
   getRoutes: async () => {
     
     const pagesData = await getPagesData();
+    const pages = await getCMSData( './public/content/pages' );
     const testimonials = await getCMSData( './public/content/testimonials' );
     const journalEntries = await getCMSData( './public/content/journal' );
+
+    let test = {};
+
+    for (let p = 0; p < pages.length; p++ ) {
+      test[ 'hello' ] = 'world';
+    }
 
     return [
       {
         path: '/',
         component: 'src/pages/Home/Home',
         getData: () => ({
-          pageData: pagesData.home,
+          pageData: {
+            ...getPageDataByName( pages, 'home' )
+          }
         })
       },
       {
@@ -70,14 +82,20 @@ export default {
         path: '/journal',
         component: 'src/pages/Journal/Journal',
         getData: () => ({
-          journalEntries: journalEntries,
+          pageData: {
+            ...getPageDataByName( pages, 'journal' ),
+            journalEntries,
+          }
         }) 
       },
       {
         path: '/testimonials',
         component: 'src/pages/Testimonials/Testimonials',
         getData: () => ({
-          testimonials
+          pageData: {
+            ...getPageDataByName( pages, 'testimonials' ),
+            testimonials,
+          }
         })
       },
       {
