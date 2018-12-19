@@ -49,9 +49,9 @@ const aeaStaff = [
 ];
 
 
-const About = () => (
+const About = ({ pageData: { heading, heroImageLg }}) => (
     <div className="about">
-        <Hero heading="About Us" />
+        <Hero heading={ heading } image={ heroImageLg } />
         <Section theme="light-grain">
             <SectionPanel padded>
                 <h2>Organized With Purpose</h2>

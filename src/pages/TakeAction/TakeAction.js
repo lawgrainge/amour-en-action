@@ -1,14 +1,16 @@
 import React from 'react';
 
+import { RouteData } from 'react-static';
+
 import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';
 
 import './take-action.css';
 
 
-const TakeAction = () => (
+const TakeAction = ({ pageData: { heading, heroImageLg }}) => (
     <div className="take-action">
-        <Hero heading="Take Action" />
+        <Hero heading={ heading } image={ heroImageLg } />
         <Section theme="light-grain">
             <SectionPanel padded>
                 <h2>Love Is Also A Verb</h2>
@@ -21,4 +23,4 @@ const TakeAction = () => (
     </div>
 );
 
-export default TakeAction;
+export default () => <RouteData component={ TakeAction } />;

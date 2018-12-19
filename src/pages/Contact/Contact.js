@@ -1,14 +1,16 @@
 import React from 'react';
 
+import { RouteData } from 'react-static';
+
 import Section, { SectionPanel, SectionImage, SlantedPanel } from '../../components/Section/Section';
 import Hero from '../../components/Hero/Hero';
 
 import './contact.css';
 
 
-const Contact = () => (
+const Contact = ({ pageData: { heading, heroImageLg }}) => (
     <div className="contact">
-        <Hero heading="Contact" />
+        <Hero heading={ heading } image={ heroImageLg } />
         <Section theme="light-grain">
             <SectionPanel padded>
                 <h2>We Want To Hear From You</h2>
@@ -21,4 +23,4 @@ const Contact = () => (
     </div>
 );
 
-export default Contact;
+export default () => <RouteData component={ Contact } />;

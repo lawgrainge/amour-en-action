@@ -12,7 +12,7 @@ collections:
     create: true
     format: 'json'
     fields:
-      - { label: 'Title', name: 'title', widget: 'string', default: 'home' }
+      - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Heading', name: 'heading', widget: 'string' }
       - { label: 'Subheading', name: 'subheading', widget: 'string', required: false }
       - { label: 'Hero Image (small)', name: 'heroImageSm', widget: 'image' }

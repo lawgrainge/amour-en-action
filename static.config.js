@@ -77,6 +77,11 @@ export default {
       {
         path: '/about',
         component: 'src/pages/About/About',
+        getData: () => ({
+          pageData: {
+            ...getPageDataByName( pages, 'about' )
+          }
+        })
       },
       {
         path: '/journal',
@@ -101,10 +106,20 @@ export default {
       {
         path: '/take-action',
         component: 'src/pages/TakeAction/TakeAction',
+        getData: () => ({
+          pageData: {
+            ...getPageDataByName( pages, 'takeAction' )
+          }
+        })
       },
       {
         path: '/contact',
         component: 'src/pages/Contact/Contact',
+        getData: () => ({
+          pageData: {
+            ...getPageDataByName( pages, 'contact' )
+          }
+        })
       },
       {
         is404: true,
