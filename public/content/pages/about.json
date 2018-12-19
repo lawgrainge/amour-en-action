@@ -1,6 +1,8 @@
 {
   "title": "about",
   "heading": "About Us",
-  "subheading": "",
-  "heroImage": ""
+  "subheading": " ",
+  "heroImageSm": "/uploads/haiti-young-man_bg.jpg",
+  "heroImageMed": "/uploads/haiti-young-man_bg.jpg",
+  "heroImageLg": "/uploads/haiti-young-man_bg.jpg"
 }
