@@ -10,6 +10,7 @@ const Header = ({ toggleMenu }) => (
         <button className="header__menu-button" type="button" onClick={ toggleMenu }>
             &#9776; Menu
         </button>
+        <span className="header__line"></span>
         <div className="header__logo"></div>
         <nav className="header__nav">
             <Link className="header__nav-link" exact to="/">Home</Link>

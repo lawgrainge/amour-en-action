@@ -47,15 +47,26 @@
     max-width: 550px;
 }
 
-@media screen and (min-width: 1024px) {
-    .hero { min-height: 425px }
-}
-
 @keyframes imageScale {
     0% {
-        background-size: 135% auto;
+        background-size: auto 135%;
     }
     100% {
-        background-size: 110% auto;
+        background-size: auto 110%;
     }
+}
+
+@media screen and (min-width: 667px) {
+    @keyframes imageScale {
+        0% {
+            background-size: 135% auto;
+        }
+        100% {
+            background-size: 110% auto;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .hero { min-height: 425px }
 }
