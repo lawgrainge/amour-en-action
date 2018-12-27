@@ -109,5 +109,6 @@
 
     .section__content {
         max-width:1000px;
+        padding: 60px 0 85px;
     }
 }}

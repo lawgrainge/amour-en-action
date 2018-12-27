@@ -14,7 +14,8 @@ const aeaStaff = [
     { 
         name: 'Duclair Atis',
         title: 'President',
-        picture: profilePlaceholder
+        picture: profilePlaceholder,
+        bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.'
     },
     { 
         name: 'Glenda Athus',
@@ -24,7 +25,7 @@ const aeaStaff = [
     { 
         name: 'Romain Athus, M.D',
         title: 'Director',
-        picture: profilePlaceholder
+        picture: profilePlaceholder,
     },
     { 
         name: 'Balanda Atis',
@@ -72,6 +73,7 @@ const About = ({ pageData: { heading, heroImageLg }}) => (
                             name={ member.name }
                             title={ member.title }
                             picture={ member.picture }
+                            bio={ member.bio }
                         />
                     ))}
                 </div>
