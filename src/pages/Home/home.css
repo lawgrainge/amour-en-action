@@ -1,51 +1,67 @@
 .heart-image {
-
-    position: absolute;
-    right: -220px;
-    width: 340px;
-    top: -90px;
-    z-index: 2;
+  position: absolute;
+  right: -195px;
+  width: 340px;
+  max-width: 800px;
+  top: -90px;
+  z-index: 2;
+  /*filter: drop-shadow(-7px 7px 17px rgba(0, 0, 0, 0.4));*/
 }
 
 .home__intro {
-    margin: 0 0 20px;
-    width: 75%;
+  margin: 0 0 20px;
+  width: 75%;
 }
 
 .highlighted {
-    display: block;
-    margin-top: 20px;
-    text-align: center;
-    font-style: italic;
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.amour-section {
+  position: relative;
+  z-index: 2;
+}
+
+.amour-panel::after {
+  content: "Amour";
+  position: absolute;
+  font-family: "PT Serif", serif;
+  font-size: 12rem;
+  left: -60px;
+  bottom: -2.3rem;
+  opacity: 0.15;
 }
 
 @media screen and (min-width: 768px) {
-    .heart-image {
-        width: 55%;
-    }
+  .heart-image {
+    width: 49%;
+  }
 
-    .amour-section {
-        margin-left: 40px;
-    }
+  .amour-section {
+    margin-left: 40px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-    .heart-image {
-        top: -130px;
-    }
+  .heart-image {
+    top: -130px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .home__intro {
-        width: 65%;
-    }
+  .home__intro {
+    width: 65%;
+  }
 
-    .heart-image {
-        width: 51%;
-        top: -160px;
-    }
+  .heart-image {
+    width: 51%;
+    top: -160px;
+  }
 
-    .amour-section {
-        margin-left: 50px;
-    }
+  .amour-section {
+    margin-left: 50px;
+  }
 }
