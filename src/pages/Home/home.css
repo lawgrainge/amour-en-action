@@ -13,6 +13,10 @@
   width: 75%;
 }
 
+.home__intro-heading {
+  width: 62%;
+}
+
 .highlighted {
   display: block;
   margin-top: 20px;
@@ -23,6 +27,10 @@
 .amour-section {
   position: relative;
   z-index: 2;
+}
+
+.amour-section h3 {
+  width: 70%;
 }
 
 .amour-panel::after {

@@ -4,6 +4,16 @@ import { Link } from "react-static";
 
 import "./header.css";
 
+function HeaderLink(props) {
+  const { children, ...linkProps } = props;
+
+  return (
+    <Link className="header__nav-link" {...linkProps}>
+      {children}
+    </Link>
+  );
+}
+
 const Header = ({ toggleMenu }) => (
   <header className="header">
     <button className="header__menu-button" type="button" onClick={toggleMenu}>
@@ -14,24 +24,14 @@ const Header = ({ toggleMenu }) => (
       <img src="/images/aea_logo.svg" />
     </div>
     <nav className="header__nav">
-      <Link className="header__nav-link" exact to="/">
+      <HeaderLink exact to="/">
         Home
-      </Link>
-      <Link className="header__nav-link" to="/about">
-        About Us
-      </Link>
-      <Link className="header__nav-link" to="/journal">
-        Journal
-      </Link>
-      <Link className="header__nav-link" to="/testimonials">
-        Testimonials
-      </Link>
-      <Link className="header__nav-link" to="/take-action">
-        Take Action
-      </Link>
-      <Link className="header__nav-link" to="/contact">
-        Contact
-      </Link>
+      </HeaderLink>
+      <HeaderLink to="/about">About Us</HeaderLink>
+      <HeaderLink to="/journal">Journal</HeaderLink>
+      <HeaderLink to="/testimonials">Testimonials</HeaderLink>
+      <HeaderLink to="/take-action">Take Action</HeaderLink>
+      <HeaderLink to="/contact">Contact</HeaderLink>
     </nav>
   </header>
 );

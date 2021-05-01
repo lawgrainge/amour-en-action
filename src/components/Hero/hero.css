@@ -28,7 +28,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: imageScale 4s forwards;
+  animation: imageScale 5s forwards;
 }
 
 .hero-text {
@@ -41,6 +41,7 @@
 .hero__heading {
   margin: 40px 0 0;
   font-size: 3.25rem;
+  line-height: 3.45rem;
   font-style: italic;
   text-align: center;
   max-width: 700px;
@@ -50,9 +51,10 @@
   margin: 1.25rem 0 0;
   font-size: 1.35rem;
   line-height: 1.75rem;
+  letter-spacing: 0.07rem;
+  word-spacing: 0.2rem;
   text-transform: uppercase;
   text-align: center;
-  max-width: 550px;
 }
 
 @media screen and (min-width: 1200px) {
