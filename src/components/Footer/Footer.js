@@ -1,22 +1,39 @@
-import React from 'react';
+import React from "react";
 
-import { Link } from 'react-static';
+import { Link } from "react-static";
 
-import './footer.css';
+import "./footer.css";
 
+const Footer = () => {
+  const date = new Date();
 
-const Footer = () => (
+  return (
     <footer className="footer">
-        <nav className="footer__links">
-            <Link className="footer__link" exact to="/">Home</Link>
-            <Link className="footer__link" to="/about">About Us</Link>
-            <Link className="footer__link" to="/journal">Journal</Link>
-            <Link className="footer__link" to="/testimonials">Testimonials</Link>
-            <Link className="footer__link" to="/take-action">Take Action</Link>
-            <Link className="footer__link" to="/contact">Contact</Link>
-        </nav>
-        <p className="footer__copyright">&copy; Amour En Action 2018</p>
+      <nav className="footer__links">
+        <Link className="footer__link" exact to="/">
+          Home
+        </Link>
+        <Link className="footer__link" to="/about">
+          About Us
+        </Link>
+        <Link className="footer__link" to="/journal">
+          Journal
+        </Link>
+        <Link className="footer__link" to="/testimonials">
+          Testimonials
+        </Link>
+        <Link className="footer__link" to="/take-action">
+          Take Action
+        </Link>
+        <Link className="footer__link" to="/contact">
+          Contact
+        </Link>
+      </nav>
+      <p className="footer__copyright">
+        &copy; Amour En Action {date.getFullYear()}
+      </p>
     </footer>
-);
+  );
+};
 
 export default Footer;
