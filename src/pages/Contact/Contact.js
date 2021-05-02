@@ -23,11 +23,12 @@ class Contact extends React.Component {
 
   render() {
     const {
+      history,
       pageData: { heading, heroImageLg },
     } = this.props;
     const { firstName, lastName, email, message } = this.state;
 
-    const isConfirmation = window.location.pathname.includes("thanks");
+    const isConfirmation = history.location.pathname.includes("thanks");
     const isFormComplete = firstName && lastName && email && message;
 
     return (
