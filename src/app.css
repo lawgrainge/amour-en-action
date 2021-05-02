@@ -51,6 +51,20 @@ strong {
   font-weight: bold;
 }
 
+input {
+  height: 50px;
+  border-radius: 4px;
+  outline: none;
+  border: 0;
+  padding: 10px;
+}
+
+textarea {
+  padding: 10px;
+  border: 0;
+  border-radius: 4px;
+}
+
 button {
   font-family: "Source Sans Pro", "HelveticaNeue-Light", sans-serif;
   cursor: pointer;

@@ -1,0 +1,25 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  padding: 20px;
+  width: calc(100% - 40px);
+  max-width: 500px;
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.contact-form input {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contact-form textarea {
+  min-height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form {
+    margin: 40px auto;
+  }
+}
