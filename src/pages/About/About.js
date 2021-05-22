@@ -14,48 +14,7 @@ import profilePlaceholder from "../../../public/images/profile-placeholder.png";
 
 import "./about.css";
 
-const aeaStaff = [
-  {
-    name: "Duclair Atis",
-    title: "President",
-    picture: profilePlaceholder,
-    bio:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-  },
-  {
-    name: "Glenda Athus",
-    title: "Chief of Operations",
-    picture: profilePlaceholder,
-  },
-  {
-    name: "Romain Athus, M.D",
-    title: "Director",
-    picture: profilePlaceholder,
-  },
-  {
-    name: "Balanda Atis",
-    title: "Coordinator",
-    picture: profilePlaceholder,
-  },
-  {
-    name: "Juliana Excellent",
-    title: "Director",
-    picture: profilePlaceholder,
-  },
-  {
-    name: "Micheline Athis",
-    title: "Nurse",
-    picture: profilePlaceholder,
-  },
-  /*{ 
-        name: 'Raymi Athis',
-        title: 'Coordinator',
-        picture: profilePlaceholder
-    }*/
-];
-
 const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
-  console.log("teamMembers:", teamMembers);
   return (
     <div className="about">
       <Hero heading={heading} image={heroImageLg} />

@@ -20,13 +20,10 @@ const Header = ({ toggleMenu }) => (
       &#9776; Menu
     </button>
     <span className="header__line"></span>
-    <div className="header__logo">
+    <Link className="header__logo" to="/" exact>
       <img src="/images/aea_logo.svg" />
-    </div>
+    </Link>
     <nav className="header__nav">
-      <HeaderLink exact to="/">
-        Home
-      </HeaderLink>
       <HeaderLink to="/about">About Us</HeaderLink>
       <HeaderLink to="/journal">Journal</HeaderLink>
       <HeaderLink to="/testimonials">Testimonials</HeaderLink>
