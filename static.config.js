@@ -50,6 +50,7 @@ export default {
     const pages = await getCMSData("./public/content/pages");
     const testimonials = await getCMSData("./public/content/testimonials");
     const journalEntries = await getCMSData("./public/content/journal");
+    const teamMembers = await getCMSData("./public/content/team");
 
     let test = {};
 
@@ -73,6 +74,7 @@ export default {
         getData: () => ({
           pageData: {
             ...getPageDataByName(pages, "about"),
+            teamMembers,
           },
         }),
       },

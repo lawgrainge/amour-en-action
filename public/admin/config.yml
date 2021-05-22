@@ -61,4 +61,5 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Picture", name: "picture", widget: "image" }
       - { label: "Short Bio", name: "shortBio", widget: "string" }
