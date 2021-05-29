@@ -6,6 +6,39 @@ media_folder: "public/uploads"
 public_folder: "uploads"
 
 collections:
+  - name: "sitePages"
+    label: "Site Pages"
+    files:
+      - label: "Contact Page"
+        name: "contact-us"
+        file: "public/content/pages/contact-us.json"
+        format: "json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - {
+              label: "Subheading",
+              name: "subheading",
+              widget: "string",
+              required: false,
+            }
+          - {
+              label: "Hero Image (small)",
+              name: "heroImageSm",
+              widget: "image",
+            }
+          - {
+              label: "Hero Image (medium)",
+              name: "heroImageMed",
+              widget: "image",
+            }
+          - {
+              label: "Hero Image (large)",
+              name: "heroImageLg",
+              widget: "image",
+            }
+          - { label: "Contact Email", name: "contactEmail", widget: "string" }
+
   - name: "pages"
     label: "Pages"
     folder: "public/content/pages"
