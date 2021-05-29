@@ -24,7 +24,7 @@ class Contact extends React.Component {
   render() {
     const {
       history,
-      pageData: { heading, heroImageLg },
+      pageData: { heading, heroImageLg, contactEmail },
     } = this.props;
     const { firstName, lastName, email, message } = this.state;
 
@@ -36,7 +36,7 @@ class Contact extends React.Component {
         <Helmet>
           <title>Amour En Action | Contact Us</title>
         </Helmet>
-        <Hero heading={heading} image={heroImageLg} />
+        <Hero heading={heading} image={`/${heroImageLg}`} />
         <Section theme="light-grain">
           <SectionPanel padded>
             {isConfirmation ? (
@@ -61,7 +61,7 @@ class Contact extends React.Component {
             <form
               className="contact-form"
               target="_blank"
-              action="https://formsubmit.co/lawgrainge@yahoo.com"
+              action={`https://formsubmit.co/${contactEmail}`}
               method="POST"
             >
               <input

@@ -38,8 +38,9 @@ const getCMSData = (cmsPath) =>
     resolve(cmsData);
   });
 
-const getPageDataByName = (pages, name) =>
-  pages.filter((p) => p.title === name)[0] || {};
+const getPageDataByName = (pages, name) => {
+  return pages.filter((p) => p.slug === name)[0] || {};
+};
 
 export default {
   getSiteData: () => ({
@@ -52,19 +53,13 @@ export default {
     const journalEntries = await getCMSData("./public/content/journal");
     const teamMembers = await getCMSData("./public/content/team");
 
-    let test = {};
-
-    for (let p = 0; p < pages.length; p++) {
-      test["hello"] = "world";
-    }
-
     return [
       {
         path: "/",
         component: "src/pages/Home/Home",
         getData: () => ({
           pageData: {
-            ...getPageDataByName(pages, "home"),
+            ...getPageDataByName(pages, "homepage"),
           },
         }),
       },
@@ -103,7 +98,7 @@ export default {
         component: "src/pages/TakeAction/TakeAction",
         getData: () => ({
           pageData: {
-            ...getPageDataByName(pages, "takeAction"),
+            ...getPageDataByName(pages, "takeaction"),
           },
         }),
       },
@@ -112,7 +107,7 @@ export default {
         component: "src/pages/Contact/Contact",
         getData: () => ({
           pageData: {
-            ...getPageDataByName(pages, "contact"),
+            ...getPageDataByName(pages, "contact-us"),
           },
         }),
       },
@@ -121,7 +116,7 @@ export default {
         component: "src/pages/Contact/Contact",
         getData: () => ({
           pageData: {
-            ...getPageDataByName(pages, "contact"),
+            ...getPageDataByName(pages, "contact-us"),
           },
         }),
       },
