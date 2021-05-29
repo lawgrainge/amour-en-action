@@ -1,5 +1,6 @@
 import React from "react";
 import { RouteData } from "react-static";
+import { Helmet } from "react-helmet";
 
 import Section, {
   SectionPanel,
@@ -17,6 +18,9 @@ import "./about.css";
 const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
   return (
     <div className="about">
+      <Helmet>
+        <title>Amour En Action | About Us</title>
+      </Helmet>
       <Hero heading={heading} image={heroImageLg} />
       <Section theme="light-grain">
         <SectionPanel padded>

@@ -1,5 +1,6 @@
 import React from "react";
 import { RouteData } from "react-static";
+import { Helmet } from "react-helmet";
 
 import Section, {
   SectionPanel,
@@ -16,6 +17,9 @@ import "./home.css";
 
 const Home = ({ pageData: { heading, subheading, heroImageLg } }) => (
   <div className="home">
+    <Helmet>
+      <title>Amour En Action</title>
+    </Helmet>
     <div className="hero-container">
       <Hero
         heading={heading}

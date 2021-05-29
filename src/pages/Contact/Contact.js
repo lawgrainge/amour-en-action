@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Helmet } from "react-helmet";
 import { RouteData } from "react-static";
 
 import Section, { SectionPanel } from "../../components/Section/Section";
@@ -33,6 +33,9 @@ class Contact extends React.Component {
 
     return (
       <div className="contact">
+        <Helmet>
+          <title>Amour En Action | Contact Us</title>
+        </Helmet>
         <Hero heading={heading} image={heroImageLg} />
         <Section theme="light-grain">
           <SectionPanel padded>
