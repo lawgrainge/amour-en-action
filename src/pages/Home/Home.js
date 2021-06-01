@@ -31,14 +31,17 @@ const Home = ({ pageData: { heading, subheading, heroImageLg } }) => (
     <Section theme="light-grain">
       <SectionPanel padded>
         <h3 className="home__intro-heading">So We Began</h3>
-        <p className="home__intro">
-          Amour En Action is a non-profit established in 1997 and is
-          incorporated as a 501(c)(3) charitable organization. We are a
-          Christian Organization dedicated to providing humanitarian and
-          educational services to the needy citizens of Haiti. Our mission is to
-          improve their living conditions while creating hope for a brighter
-          future.
-        </p>
+        <div className="home__intro">
+          <p>
+            Amour En Action is a non-profit established in 1997 and is
+            incorporated as a 501(c)(3) charitable organization. We are a
+            Christian Organization dedicated to providing humanitarian and
+            educational services to the needy citizens of Haiti. Our mission is
+            to improve their living conditions while creating hope for a
+            brighter future.
+          </p>
+          <Button to="/about">About us</Button>
+        </div>
       </SectionPanel>
       <HeartImage src={haitianBaby} pos={{ x: -120, y: 0 }} />
     </Section>
@@ -55,8 +58,8 @@ const Home = ({ pageData: { heading, subheading, heroImageLg } }) => (
             <li>Building Clinics & Hospitals</li>
           </ul>
 
-          <Button to="/about" style={{ marginLeft: 10 }}>
-            About us
+          <Button to="/take-action" style={{ marginLeft: 10 }}>
+            Take Action
           </Button>
         </div>
       </SlantedPanel>

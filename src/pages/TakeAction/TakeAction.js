@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { RouteData } from "react-static";
 
 import Section, { SectionPanel } from "../../components/Section/Section";
+import Button from "../../components/Button/Button";
 import Hero from "../../components/Hero/Hero";
 
 import "./take-action.css";
@@ -20,6 +21,30 @@ const TakeAction = ({ pageData: { heading, heroImageLg } }) => (
           "Little children, let us not love in word or talk but in deed and in
           truth." - 1 John 3:18
         </p>
+      </SectionPanel>
+    </Section>
+    <Section theme="white">
+      <SectionPanel padded width="100%">
+        <p>
+          Please consider taking action by praying for us or by financial
+          contributions. All contributions are tax-deductible. If you prefer not
+          to use PayPal, please send donations to the following address:{" "}
+          <em>355 Independence Blvd. Lawnside, NJ 08045</em>
+        </p>
+        <h3>Thank You</h3>
+        <form
+          className="donate-form"
+          action="https://www.paypal.com/cgi-bin/webscr"
+          method="POST"
+        >
+          <input type="hidden" name="cmd" value="_s-xclick" />
+          <input type="hidden" name="hosted_button_id" value="3522657" />
+          <Button isSubmit>Donate</Button>
+          <img
+            src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png"
+            alt="Buy now with PayPal"
+          />
+        </form>
       </SectionPanel>
     </Section>
   </div>
