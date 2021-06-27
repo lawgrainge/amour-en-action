@@ -7,6 +7,7 @@
   max-width: 500px;
   background: #ccc;
   border-radius: 4px;
+  box-shadow: -2px 2px 14px rgba(40, 34, 34, 0.25);
 }
 
 .contact-form input {

@@ -9,8 +9,9 @@ import Section, {
 } from "../../components/Section/Section";
 import Hero from "../../components/Hero/Hero";
 import Button from "../../components/Button/Button";
+import PolaroidImage from "../../components/PolaroidImage/PolaroidImage";
 
-import haitianBaby from "../../../public/images/haitian-baby.jpg";
+import medicalHelp from "../../../public/images/aea_medical_help.jpg";
 import haitianSchoolKids from "../../../public/images/haitian-school-kids.jpg";
 
 import "./home.css";
@@ -43,7 +44,8 @@ const Home = ({ pageData: { heading, subheading, heroImageLg } }) => (
           <Button to="/about">About us</Button>
         </div>
       </SectionPanel>
-      <HeartImage src={haitianBaby} pos={{ x: -120, y: 0 }} />
+      <PolaroidImage src={medicalHelp} />
+      <PolaroidImage />
     </Section>
     <Section>
       <SectionImage src={haitianSchoolKids} />

@@ -10,7 +10,7 @@ import Section, {
 import Hero from "../../components/Hero/Hero";
 import StaffCard from "../../components/StaffCard/StaffCard";
 
-import devImage from "../../../public/uploads/developer.jpg";
+import schoolImage from "../../../public/images/aea_school_help.jpg";
 import profilePlaceholder from "../../../public/images/profile-placeholder.png";
 
 import "./about.css";
@@ -50,7 +50,7 @@ const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
         </SectionPanel>
       </Section>
       <Section>
-        <SectionImage src={devImage} />
+        <SectionImage src={schoolImage} />
         <SlantedPanel>
           <div className="about-accomplishments">
             <h2>Some Accomplishments</h2>

@@ -20,6 +20,19 @@
   width: 62%;
 }
 
+.home .polaroid-image {
+  top: -185px;
+  right: -330px;
+  transform: rotate3d(0, 0, 1, -10deg) scale3d(0.58, 0.58, 0.58);
+  z-index: 2;
+}
+
+.home .polaroid-image:last-child {
+  top: -160px;
+  transform: rotate3d(0, 0, 1, -15deg) scale3d(0.58, 0.58, 0.58);
+  z-index: 1;
+}
+
 .highlighted {
   display: block;
   margin-top: 20px;
@@ -42,8 +55,8 @@
   font-family: "PT Serif", serif;
   font-size: 12rem;
   left: -60px;
-  bottom: -2.3rem;
-  opacity: 0.15;
+  bottom: -5.5rem;
+  opacity: 0.11;
 }
 
 @media screen and (min-width: 768px) {
@@ -54,11 +67,26 @@
   .amour-section {
     margin-left: 40px;
   }
+
+  .home .polaroid-image {
+    right: -250px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .heart-image {
     top: -130px;
+  }
+
+  .home .polaroid-image {
+    top: -155px;
+    right: -150px;
+    transform: rotate3d(0, 0, 1, -10deg) scale3d(0.7, 0.7, 0.7);
+  }
+
+  .home .polaroid-image:last-child {
+    top: -130px;
+    transform: rotate3d(0, 0, 1, -15deg) scale3d(0.7, 0.7, 0.7);
   }
 }
 
@@ -74,5 +102,17 @@
 
   .amour-section {
     margin-left: 50px;
+  }
+
+  .home .polaroid-image {
+    top: -90px;
+    right: calc(40vw - 640px);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  .home .polaroid-image:last-child {
+    transform: rotate3d(0, 0, 1, -15deg);
+    right: calc(40vw - 644px);
+    top: -60px;
   }
 }
