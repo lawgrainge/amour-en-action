@@ -10,7 +10,7 @@
   top: 0;
   right: 0;
   width: 0;
-  border-top: 2px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
   transition: filter 0.4s;
   animation: menu-grow 0.5s 0.2s forwards;
 }
@@ -41,7 +41,7 @@
 
 .header__nav {
   display: none;
-  margin: 20px 0 0 60px;
+  margin: 20px 0 0 82px;
   justify-content: center;
 }
 
@@ -60,10 +60,10 @@
   content: "";
   position: absolute;
   bottom: 8px;
-  width: 50%;
+  width: 52%;
   height: 4px;
   background: rgb(240, 168, 13);
-  left: 25%;
+  left: 24%;
 }
 
 .header__nav-link:nth-child(6) {

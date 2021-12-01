@@ -2,8 +2,8 @@ import React from "react";
 
 import "./section.css";
 
-const Section = ({ children, theme }) => (
-  <section className={`section ${theme ? `section--${theme}` : ""}`}>
+const Section = ({ className, children, theme }) => (
+  <section className={`section ${className} ${theme ? `section--${theme}` : ""}`}>
     {children}
   </section>
 );

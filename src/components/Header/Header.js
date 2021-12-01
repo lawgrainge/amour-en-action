@@ -24,6 +24,7 @@ const Header = ({ toggleMenu }) => (
       <img src="/images/aea_logo.svg" />
     </Link>
     <nav className="header__nav">
+      <HeaderLink to="/" exact>Home</HeaderLink>
       <HeaderLink to="/about">About Us</HeaderLink>
       <HeaderLink to="/journal">Journal</HeaderLink>
       <HeaderLink to="/testimonials">Testimonials</HeaderLink>
