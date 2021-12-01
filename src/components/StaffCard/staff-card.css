@@ -12,7 +12,7 @@
   box-shadow: -2px 2px 14px rgba(40, 34, 34, 0.25);
 }
 
-.staff-card:hover {
+/* .staff-card:hover {
   transform: scale3d(1.05, 1.05, 1.05);
 }
 
@@ -26,7 +26,7 @@
 
 .staff-card:hover .staff-card__pic {
   margin-top: 78px;
-}
+} */
 
 .staff-card__info {
   position: absolute;

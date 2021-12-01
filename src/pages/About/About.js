@@ -16,6 +16,9 @@ import profilePlaceholder from "../../../public/images/profile-placeholder.png";
 import "./about.css";
 
 const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
+
+  console.log('teamMembers:', teamMembers);
+  
   return (
     <div className="about">
       <Helmet>
