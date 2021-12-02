@@ -1,84 +1,83 @@
 .mobile-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(46, 40, 33,.75);
-    z-index: 10;
-    opacity: 0;
-    transform: translateY(-10000px);
-    transition: opacity .4s, transform 0s .4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 40, 33, 0.75);
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10000px);
+  transition: opacity 0.4s, transform 0s 0.4s;
 }
 
 .mobile-menu--open {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .4s;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s;
 }
 
 .mobile-menu__close-button {
-    position: absolute;
-    padding: 5px 10px 10px 30px;
-    right: 15px;
-    top: 25px;
-    background: transparent;
-    font-size: 1.35rem;
-    letter-spacing: 0.045rem;
-    text-transform: uppercase;
-    color: #fcfcfc;
-    z-index: 1;
+  position: absolute;
+  padding: 5px 10px 10px 30px;
+  right: 15px;
+  top: 25px;
+  background: transparent;
+  font-size: 1.35rem;
+  letter-spacing: 0.045rem;
+  text-transform: uppercase;
+  color: #fcfcfc;
+  z-index: 1;
 }
 
 .mobile-menu__close-button::before {
-    content: '\00D7';
-    position: absolute;
-    top: -7px;
-    left: 0;
-    font-size: 2.5rem;
-    
+  content: "\00D7";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  font-size: 2.5rem;
 }
 
 .mobile-menu__list {
-    list-style: none;
-    margin: 60px 1.5rem 0;
-    padding: 0;
+  list-style: none;
+  margin: 60px 1.5rem 0;
+  padding: 0;
 }
 
 .mobile-menu__list-item {
-    border-bottom: 2px solid #f1f1f1;
+  border-bottom: 2px solid #f1f1f1;
 }
 
 .mobile-menu__list-item:last-child {
-    border: none;
+  border: none;
 }
 
 .mobile-menu__link {
-    position: relative;
-    display: block;
-    color: #fcfcfc;
-    font-size: 1.2rem;
-    padding: .875rem;
-    text-decoration: none;
-    transition: background .3s;
+  position: relative;
+  display: block;
+  color: #fcfcfc;
+  font-size: 1.2rem;
+  padding: 0.875rem;
+  text-decoration: none;
+  transition: background 0.3s;
 }
 
 .mobile-menu__link.active {
-    font-style: italic;
-    font-weight: bold;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .mobile-menu__link.active::before {
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 5px;
-    background: red;
-    left: 0px;
-    top: 45%;
-    transform: skewX(-24deg);
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 5px;
+  background: #f0a80d;
+  left: 0px;
+  top: 45%;
+  transform: skewX(-24deg);
 }
 
 .mobile-menu__link:hover {
-    background: rgba(31, 28, 24, 0.7);
+  background: rgba(31, 28, 24, 0.7);
 }

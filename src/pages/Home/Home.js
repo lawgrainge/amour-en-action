@@ -29,7 +29,7 @@ const Home = ({ pageData: { heading, subheading, heroImageLg } }) => (
         image={heroImageLg}
       />
     </div>
-    <Section theme="light-grain">
+    <Section className="home__intro-section" theme="light-grain">
       <SectionPanel padded>
         <h3 className="home__intro-heading">So We Began</h3>
         <div className="home__intro">

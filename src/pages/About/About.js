@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { RouteData } from "react-static";
 import { Helmet } from "react-helmet";
 
@@ -17,7 +17,31 @@ import "./about.css";
 
 const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
 
-  console.log('teamMembers:', teamMembers);
+  const [selectedMemberIdx, setSelectedMemberIdx] = useState();
+  const [showBio, setShowBio] = useState(false);
+  const teamMemberSectionRef = useRef();
+  const hasSelectedMember = Number.isInteger(selectedMemberIdx);
+
+  function onTeamMemberClick(idx) {
+    setSelectedMemberIdx(idx);
+
+    if (teamMemberSectionRef.current) {
+      window.scrollTo({
+        top: teamMemberSectionRef.current.offsetTop - 15,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    setTimeout(() => {
+      setShowBio(true);
+    }, 400)
+  }
+
+  function onShowAllTeamMembers() {
+    setSelectedMemberIdx(null);
+    setShowBio(false);
+  }
   
   return (
     <div className="about">
@@ -37,9 +61,9 @@ const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
           </p>
         </SectionPanel>
       </Section>
-      <Section theme="medium-gray">
+      <Section className={`staff-section ${showBio ? 'staff-section--bio' : ''}`} theme="medium-gray" ref={teamMemberSectionRef}>
         <SectionPanel padded>
-          <div className="about-staff">
+          <div className={`about-staff ${hasSelectedMember ? 'about-staff--bio' : ''}`}>
             {teamMembers.map((member, idx) => (
               <StaffCard
                 key={`sc-${idx}`}
@@ -47,9 +71,19 @@ const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
                 title={member.title}
                 picture={member.picture || profilePlaceholder}
                 bio={member.shortBio}
+                isSelected={selectedMemberIdx === idx}
+                onClick={() => onTeamMemberClick(idx)}
               />
             ))}
           </div>
+          {showBio && teamMembers && teamMembers[selectedMemberIdx] && teamMembers[selectedMemberIdx].shortBio &&
+          <div className="bio">
+            <button type="button" onClick={onShowAllTeamMembers}>
+              See all team members
+            </button>
+            <p>{teamMembers[selectedMemberIdx].shortBio}</p>
+          </div>
+          }
         </SectionPanel>
       </Section>
       <Section>

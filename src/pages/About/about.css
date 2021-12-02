@@ -1,9 +1,82 @@
 .about-accomplishments {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .about-staff {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  transition: all 0s;
+}
+
+.about-staff--bio .staff-card {
+  opacity: 0;
+  position: absolute;
+}
+
+.about-staff--bio .staff-card--selected {
+  opacity: 1;
+  position: static;
+  z-index: 2;
+}
+
+.staff-section .section__content {
+  width: 100%;
+  min-height: 700px;
+}
+
+@media screen and (max-width: 1024px) {
+  .staff-section .section__content {
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .about-staff {
+    padding-top: 20px;
+  }
+
+  .about-staff--bio {
+    width: 265px;
+    transition: all 0.25s;
+  }
+
+  .bio {
+    padding-left: 40px;
+  }
+
+  .staff-section .section__content {
+    padding-bottom: 60px;
+  }
+
+  .staff-section--bio .section__panel {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  }
+
+  .about-staff--bio .staff-card--selected {
+    margin-top: 10px;
+  }
+}
+
+@keyframes show-bio {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bio {
+  opacity: 0;
+  animation: show-bio 0.34s 0.07s forwards;
+}
+
+.bio button {
+  background: none;
+  color: white;
+  text-transform: unset;
+  text-decoration: underline;
+  font-style: italic;
 }

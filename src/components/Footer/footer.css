@@ -1,60 +1,59 @@
 .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    padding: 0 25px;
-    min-height: 250px;
-    width: 100%;
-    text-align: center;
-    color: #fcfcfc;
-    background: hsla( 30, 7%, 14%, .94 );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 0 25px;
+  min-height: 250px;
+  width: 100%;
+  text-align: center;
+  color: #fcfcfc;
+  background: hsla(30, 7%, 14%, 0.94);
 }
 
 .footer::after {
-    content: '';
-    background: url( '../../../public/uploads/haiti-map.svg' ) no-repeat;
-    background-size: 160%;
-    background-position: 136% 0%;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    filter: contrast(25);
-    z-index: -1;
+  content: "";
+  background: url("../../../public/uploads/haiti-map.svg") no-repeat;
+  background-size: 160%;
+  background-position: 136% 0%;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  filter: contrast(25);
+  z-index: -1;
 }
 
 .footer__link {
-    padding: .4rem;
-    color: #dcdcdc;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: .875rem;
-    margin: 0 .3rem;
-    transition: color .3s;
+  padding: 0.4rem;
+  color: #dcdcdc;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin: 0 0.3rem;
+  transition: color 0.3s;
 }
 
 .footer__link:hover {
-    color: #fcfcfc;
+  color: #fcfcfc;
 }
 
 .footer__copyright {
-    margin-top: 2rem;
-    font-size: .875rem;
-    color: #aeaeae;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #aeaeae;
 }
 
 @media screen and (min-width: 1200px) {
+  .footer {
+    min-height: 350px;
+  }
 
-    .footer {
-        min-height: 350px;
-    }
-
-    .footer::after {
-        background-size: 55%;
-        background-position: -20% 20%;
-    }
+  .footer::after {
+    background-size: 55%;
+    background-position: -20% 20%;
+  }
 }

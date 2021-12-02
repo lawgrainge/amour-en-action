@@ -1,7 +1,8 @@
 .staff-card {
+  display: flex;
   position: relative;
   margin: 0 20px 40px;
-  padding-bottom: 25px;
+  padding: 0;
   width: 250px;
   height: 330px;
   background: #fcfcfc;
@@ -9,24 +10,25 @@
   border-bottom: 2px solid #555;
   transform: translate3d(0);
   transition: all 0.3s;
-  box-shadow: -2px 2px 14px rgba(40, 34, 34, 0.25);
+  box-shadow: -2px 2px 14px rgba(40, 34, 34, 0.35);
+  border-radius: 7px;
+  overflow: hidden;
 }
 
-/* .staff-card:hover {
-  transform: scale3d(1.05, 1.05, 1.05);
+.staff-card--selected {
+  transform: scale3d(1.1, 1.1, 1.1);
+  box-shadow: 2px 8px 22px rgba(40, 34, 34, 0.35);
 }
 
-.staff-card:hover .staff-card__bio {
-  display: block;
+.staff-card__pic-container {
+  display: flex;
+  min-height: 220px;
 }
 
-.staff-card:hover .staff-card__info {
-  bottom: 250px;
+.staff-card__pic {
+  object-fit: cover;
+  max-width: 101%;
 }
-
-.staff-card:hover .staff-card__pic {
-  margin-top: 78px;
-} */
 
 .staff-card__info {
   position: absolute;

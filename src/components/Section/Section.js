@@ -2,11 +2,11 @@ import React from "react";
 
 import "./section.css";
 
-const Section = ({ className, children, theme }) => (
-  <section className={`section ${className} ${theme ? `section--${theme}` : ""}`}>
+const Section = React.forwardRef(({ className, children, theme }, ref) => (
+  <section ref={ref} className={`section ${className} ${theme ? `section--${theme}` : ""}`}>
     {children}
   </section>
-);
+));
 
 export const SectionImage = ({ src }) => (
   <div

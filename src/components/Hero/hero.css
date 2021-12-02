@@ -7,6 +7,7 @@
   width: 100%;
   height: 30vh;
   min-height: 350px;
+  border-bottom: 10px solid #fcfcfc;
 }
 
 .hero--large {
@@ -39,7 +40,7 @@
 }
 
 .hero__heading {
-  margin: 40px 0 0;
+  margin: 55px 0 0;
   font-size: 3.25rem;
   line-height: 3.45rem;
   font-style: italic;
