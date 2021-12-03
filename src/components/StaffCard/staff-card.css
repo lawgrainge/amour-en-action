@@ -22,19 +22,24 @@
 
 .staff-card__pic-container {
   display: flex;
-  min-height: 220px;
+  min-height: 230px;
+  width: 100%;
 }
 
 .staff-card__pic {
   object-fit: cover;
-  max-width: 101%;
+  width: 101%;
 }
 
 .staff-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
   bottom: 0;
-  padding: 18px 0;
+  padding: 18px 12px;
   width: 100%;
+  min-height: 100px;
   background: #fcfcfc;
   transition: bottom 0.3s;
   z-index: 2;
@@ -43,12 +48,15 @@
 .staff-card__name {
   display: block;
   font-family: "PT Serif", serif;
+  font-size: 20px;
+  color: #222;
 }
 
 .staff-card__title {
   display: block;
   margin: 5px 0 0;
-  font-size: 0.85rem;
+  font-size: 16px;
+  color: #676767;
 }
 
 .staff-card__bio {
@@ -62,10 +70,4 @@
   font-size: 0.85rem;
   color: #fcfcfc;
   z-index: 1;
-}
-
-@media screen and (min-width: 1024px) {
-  .staff-card {
-    width: 225px;
-  }
 }
