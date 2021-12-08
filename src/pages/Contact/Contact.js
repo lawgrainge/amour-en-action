@@ -48,8 +48,8 @@ class Contact extends React.Component {
               <React.Fragment>
                 <h2>We Want To Hear From You</h2>
                 <p>
-                  You can call us directly at <strong>609-707-4561</strong> or
-                  fill out the form below. We promise to get back to you as soon
+                  You can call us directly at <a href="tel:609-707-4561">(609) 707-4561</a>. You can email us at <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+                  You may also reach us by filling out the form below. We promise to get back to you as soon
                   as possible.
                 </p>
               </React.Fragment>

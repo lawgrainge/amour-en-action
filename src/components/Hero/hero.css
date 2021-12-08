@@ -8,6 +8,7 @@
   height: 30vh;
   min-height: 350px;
   border-bottom: 10px solid #fcfcfc;
+  z-index: 1;
 }
 
 .hero--large {
@@ -37,6 +38,7 @@
   padding: 40px;
   color: #fcfcfc;
   z-index: 2;
+  text-shadow: -2px 4px 12px rgba(40, 34, 34, 0.15);
 }
 
 .hero__heading {

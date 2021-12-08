@@ -31,7 +31,6 @@ const TakeAction = ({ pageData: { heading, heroImageLg } }) => (
           to use PayPal, please send donations to the following address:{" "}
           <em>355 Independence Blvd. Lawnside, NJ 08045</em>
         </p>
-        <h3>Thank You</h3>
         <form
           className="donate-form"
           action="https://www.paypal.com/cgi-bin/webscr"

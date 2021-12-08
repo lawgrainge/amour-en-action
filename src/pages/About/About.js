@@ -86,7 +86,7 @@ const About = ({ pageData: { heading, heroImageLg, teamMembers } }) => {
           }
         </SectionPanel>
       </Section>
-      <Section>
+      <Section className="accomplishments-section">
         <SectionImage src={schoolImage} />
         <SlantedPanel>
           <div className="about-accomplishments">

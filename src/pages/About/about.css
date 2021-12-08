@@ -1,5 +1,6 @@
 .about-accomplishments {
   margin-left: 30px;
+  max-width: 530px;
 }
 
 .about-staff {
@@ -24,6 +25,15 @@
 .staff-section .section__content {
   width: 100%;
   min-height: 700px;
+}
+
+.accomplishments-section .section__image {
+  margin-right: -30px;
+}
+
+.accomplishments-section .section__content {
+  padding-right: 35px;
+  padding-left: 20px;
 }
 
 @media screen and (max-width: 1024px) {

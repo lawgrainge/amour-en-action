@@ -6,6 +6,23 @@
   background: #222;
 }
 
+.section h3,
+.section h2 {
+  position: relative;
+  margin-bottom: 1.8em;
+}
+
+.section h3::after,
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 39%;
+  bottom: -15px;
+  width: 22%;
+  height: 1px;
+  background: #95928e;
+}
+
 .section--light-grain {
   background-color: #e6e5e0;
   background-image: url("/images/grain.png");

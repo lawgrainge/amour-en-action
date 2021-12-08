@@ -7,7 +7,7 @@
   max-width: 500px;
   background: #ccc;
   border-radius: 4px;
-  box-shadow: -2px 2px 14px rgba(40, 34, 34, 0.25);
+  box-shadow: -2px 10px 17px 0px rgba(40, 34, 34, 0.25);
 }
 
 .contact-form input {
@@ -17,10 +17,22 @@
 
 .contact-form textarea {
   min-height: 200px;
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #1b70bb;
+  font-weight: bold;
 }
 
 @media screen and (min-width: 1024px) {
   .contact-form {
     margin: 60px auto;
+  }
+
+  .contact a {
+    color: #222;
+    text-decoration: none;
+    pointer-events: none;
   }
 }

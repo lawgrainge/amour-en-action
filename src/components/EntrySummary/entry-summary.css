@@ -4,9 +4,9 @@
   margin: 0 auto 30px auto;
   padding: 15px;
   max-width: 750px;
-  background: #efefef;
+  background: #efeeec;
   border-bottom: 1px solid rgb(199, 199, 199);
-  box-shadow: -2px 2px 14px rgba(40, 34, 34, 0.25);
+  box-shadow: -3px 7px 14px 0px rgba(40, 34, 34, 0.18);
   text-decoration: none;
 }
 
@@ -24,7 +24,7 @@
 
 .entry-summary__info-summary {
   display: block;
-  margin: 8px 0 0;
+  margin: 12px 0 0;
   font-size: 0.85rem;
   color: #555;
   text-decoration: none;
@@ -57,5 +57,11 @@
     margin: 0;
     width: 150px;
     height: 125px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .entry-summary {
+    padding: 24px;
   }
 }

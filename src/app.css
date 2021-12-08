@@ -17,6 +17,10 @@ body {
   background: #222;
 }
 
+html input {
+  font-family: "Source Sans Pro", "HelveticaNeue-Light", sans-serif;
+}
+
 h1,
 h2,
 h3 {
@@ -35,6 +39,10 @@ img {
 p {
   margin: 30px 0;
   line-height: 1.8rem;
+}
+
+p:first-child {
+  margin-top: 0;
 }
 
 ul {
