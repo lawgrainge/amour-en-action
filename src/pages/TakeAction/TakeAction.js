@@ -29,7 +29,7 @@ const TakeAction = ({ pageData: { heading, heroImageLg } }) => (
           Please consider taking action by praying for us or by financial
           contributions. All contributions are tax-deductible. If you prefer not
           to use PayPal, please send donations to the following address:{" "}
-          <em>355 Independence Blvd. Lawnside, NJ 08045</em>
+          <em>22 Elsinore Dr, Hainesport, NJ 08036</em>
         </p>
         <form
           className="donate-form"
